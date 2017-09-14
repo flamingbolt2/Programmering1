@@ -7,14 +7,28 @@ public class Car {
 	private int antaletRattar = 1;
 	private String carBrand = "Volvo";
 	private int speed = 0;
-	
-	
-	
-	public void setSpeed(int newSpeed ) {
-		speed = newSpeed; 
+
+	/**
+	 * Konstruktor för Bil classen Setter färgen på bilen vid skapande
+	 */
+	public Car(String selectedColor) {
+		color = selectedColor;
 	}
+
+	public void setSpeed(int newSpeed) {
+		speed = newSpeed;
+	}
+
 	public int getSpeed() {
 		return speed;
-		
+
+	}
+
+	public void setColor(String newColor) {
+		color = newColor;
+	}
+
+	public String getColor() {
+		return color;
 	}
 }
