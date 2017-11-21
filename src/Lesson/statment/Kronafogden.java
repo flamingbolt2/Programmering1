@@ -4,17 +4,19 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Kronafogden {
-
 	public static void main(String[] args) {
+		String usersPick;
+		boolean coinFlippValue;
 
+		Kronafogden kalle = new Kronafogden();
 		Scanner usersGuess = new Scanner(System.in);
 
 		System.out.println("Select Heads or Tails: ");
-		String usersPick = usersGuess.nextLine();
+		usersPick = usersGuess.nextLine();
 
 		Random randomGenerator = new Random();
 
-		boolean coinFlippValue = randomGenerator.nextBoolean();
+		coinFlippValue = randomGenerator.nextBoolean();
 
 		if (coinFlippValue == true) {
 			System.out.println("Computer - Heads");
@@ -22,10 +24,13 @@ public class Kronafogden {
 			System.out.println("Computer - Tails");
 		}
 
-		if (coinFlippValue == true && usersPick.equals("Heads")) {
+		if (coinFlippValue == true && usersPick.equalsIgnoreCase("Heads")) {
 
-			System.out.println("You Won!");
-		} else if (coinFlippValue == false && usersPick.equals("Tails")) {
+			String upperCase = "UPPERCASE";
+			String lowerCase = "lowercase";
+
+			System.out.println("You Won!" + " " + "your case was: " + lowerCase);
+		} else if (coinFlippValue == false && usersPick.equalsIgnoreCase("Tails")) {
 
 		} else {
 			System.out.println("Better luck next time");
